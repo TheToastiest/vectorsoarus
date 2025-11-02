@@ -1,0 +1,12 @@
+[package]
+name = "soarus-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = { workspace = true }
+hashbrown = { workspace = true }
+smallvec = { workspace = true }
+rayon = { workspace = true }
+bytemuck = { workspace = true }
+serde = { workspace = true }

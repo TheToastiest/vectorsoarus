@@ -1,0 +1,11 @@
+[package]
+name = "soarus-reg"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = { workspace = true }
+nalgebra = { workspace = true }
+rayon = { workspace = true }
+soarus-core = { path = "../soarus-core" }
+soarus-nn = { path = "../soarus-nn" }

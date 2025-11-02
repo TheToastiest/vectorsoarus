@@ -1,0 +1,12 @@
+[package]
+name = "soarus-viewer"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+# Add "rerun" later; keep as no-op for now.
+default = []
+
+[dependencies]
+anyhow = { workspace = true }
+soarus-core = { path = "../soarus-core" }

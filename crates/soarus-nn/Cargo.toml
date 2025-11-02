@@ -1,0 +1,11 @@
+[package]
+name = "soarus-nn"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = { workspace = true }
+hashbrown = { workspace = true }
+rayon = { workspace = true }
+smallvec = { workspace = true }
+soarus-core = { path = "../soarus-core" }

@@ -1,0 +1,12 @@
+[package]
+name = "soarus-features"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = { workspace = true }
+rayon = { workspace = true }
+smallvec = { workspace = true }
+nalgebra = { workspace = true }
+soarus-core = { path = "../soarus-core" }
+soarus-nn = { path = "../soarus-nn" }
