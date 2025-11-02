@@ -15,3 +15,7 @@ soarus-io = { path = "../soarus-io" }
 soarus-filters = { path = "../soarus-filters" }
 soarus-features = { path = "../soarus-features" }
 soarus-viewer = { path = "../soarus-viewer" }
+soarus-reg = { path = "../soarus-reg" }
+soarus-nn = { path = "../soarus-nn" }
+
+nalgebra = { version = "0.33", default-features = false, features = ["std"] }

@@ -8,3 +8,4 @@ anyhow = { workspace = true }
 hashbrown = { workspace = true }
 rayon = { workspace = true }
 soarus-core = { path = "../soarus-core" }
+soarus-nn   = { path = "../soarus-nn" }

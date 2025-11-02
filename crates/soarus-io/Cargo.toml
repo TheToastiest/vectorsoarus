@@ -7,3 +7,4 @@ edition = "2021"
 anyhow = { workspace = true }
 ply-rs = { workspace = true }
 soarus-core = { path = "../soarus-core" }
+las = { version = "0.9", features = ["laz"] }   # pure-Rust LAZ decoder

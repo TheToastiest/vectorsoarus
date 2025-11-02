@@ -52,6 +52,41 @@ impl<'a> GridIndex<'a> {
             (self.pts.z[i]*inv).floor() as i32,
         ]
     }
+    /// Find the nearest neighbor of an arbitrary 3D point p within `r`.
+    /// Returns (index, dist2) if found.
+    pub fn nearest_in_radius(&self, p: [f32;3], r: f32) -> Option<(usize, f32)> {
+        let inv = 1.0 / self.cell;
+        let base = [
+            (p[0] * inv).floor() as i32,
+            (p[1] * inv).floor() as i32,
+            (p[2] * inv).floor() as i32,
+        ];
+        let r2 = r * r;
+        let mut best: Option<(usize, f32)> = None;
+        for dx in -1..=1 {
+            for dy in -1..=1 {
+                for dz in -1..=1 {
+                    let key = [base[0]+dx, base[1]+dy, base[2]+dz];
+                    if let Some(bin) = self.buckets.get(&key) {
+                        for &j in bin {
+                            let d2 = (self.pts.x[j]-p[0]).powi(2)
+                                + (self.pts.y[j]-p[1]).powi(2)
+                                + (self.pts.z[j]-p[2]).powi(2);
+                            if d2 <= r2 {
+                                match best {
+                                    None => best = Some((j, d2)),
+                                    Some((_bj, bd2)) if d2 < bd2 => best = Some((j, d2)),
+                                    _ => {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        best
+    }
+
 }
 
 impl<'a> NeighborIndex3 for GridIndex<'a> {
@@ -103,4 +138,5 @@ impl<'a> NeighborIndex3 for GridIndex<'a> {
         }
         out
     }
+    
 }
