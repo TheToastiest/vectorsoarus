@@ -1,0 +1,10 @@
+[package]
+name = "soarus-descriptors"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+rayon = "1.10"
+soarus-core = { path = "../soarus-core" }
+soarus-nn   = { path = "../soarus-nn" }

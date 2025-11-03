@@ -17,5 +17,7 @@ soarus-features = { path = "../soarus-features" }
 soarus-viewer = { path = "../soarus-viewer" }
 soarus-reg = { path = "../soarus-reg" }
 soarus-nn = { path = "../soarus-nn" }
-
+soarus-descriptors = { path = "../soarus-descriptors" }
+soarus-ann = { path = "../soarus-ann" }
 nalgebra = { version = "0.33", default-features = false, features = ["std"] }
+serde_json = "1.0.145"

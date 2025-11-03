@@ -9,6 +9,8 @@ members = [
     "crates/soarus-reg",
     "crates/soarus-viewer",
     "crates/soarus-cli",
+    "crates/soarus-descriptors",
+    "crates/soarus-ann",
 ]
 
 [workspace.package]

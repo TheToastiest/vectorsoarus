@@ -781,13 +781,23 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "67b1b7a3b5fe4f1376887184045fcf45c69e92af734b7aaddc05fb777b6fbd03"
 
 [[package]]
+name = "soarus-ann"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+]
+
+[[package]]
 name = "soarus-cli"
 version = "0.1.0"
 dependencies = [
  "anyhow",
  "clap",
  "nalgebra",
+ "serde_json",
+ "soarus-ann",
  "soarus-core",
+ "soarus-descriptors",
  "soarus-features",
  "soarus-filters",
  "soarus-io",
@@ -806,6 +816,16 @@ dependencies = [
  "rayon",
  "serde",
  "smallvec",
+]
+
+[[package]]
+name = "soarus-descriptors"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "rayon",
+ "soarus-core",
+ "soarus-nn",
 ]
 
 [[package]]
