@@ -11,6 +11,7 @@ members = [
     "crates/soarus-cli",
     "crates/soarus-descriptors",
     "crates/soarus-ann",
+    "crates/soarus-bridge",
 ]
 
 [workspace.package]

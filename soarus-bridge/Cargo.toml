@@ -1,0 +1,16 @@
+[package]
+name = "soarus-bridge"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+nalgebra = { version = "0.33", default-features = false, features = ["std","serde-serialize"] }
+
+soarus-core     = { path = "../soarus-core" }
+soarus-io       = { path = "../soarus-io" }
+soarus-filters  = { path = "../soarus-filters" }
+soarus-features = { path = "../soarus-features" }
+soarus-reg      = { path = "../soarus-reg" }
+soarus-nn       = { path = "../soarus-nn" }
